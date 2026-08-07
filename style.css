@@ -1,0 +1,224 @@
+:root {
+  --color-bg: #0f1720;
+  --color-surface: #ffffff;
+  --color-text: #1a2332;
+  --color-muted: #5a6472;
+  --color-accent: #0078d4; /* azul Azure */
+  --color-accent-dark: #005a9e;
+  --color-border: #e3e7ec;
+  --font-main: 'Segoe UI', Roboto, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #f4f6f8;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-accent-dark) 100%);
+  color: #ffffff;
+  padding: 48px 0 40px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.header .subtitle {
+  margin-top: 6px;
+  font-size: 1.1rem;
+  color: #cfe4f7;
+}
+
+.header .contact {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+
+.header .contact a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.header .contact a:hover {
+  border-bottom-color: #ffffff;
+}
+
+.header .contact span {
+  color: #cfe4f7;
+}
+
+/* MAIN SECTIONS */
+main {
+  padding: 32px 24px 16px;
+}
+
+.section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-size: 1.15rem;
+  color: var(--color-accent-dark);
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section p {
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+/* CERTIFICATIONS */
+.cert-list {
+  list-style: none;
+}
+
+.cert-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-list li:last-child {
+  border-bottom: none;
+}
+
+.cert-list strong {
+  color: var(--color-text);
+  font-size: 0.98rem;
+}
+
+.cert-date {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+/* EXPERIENCE */
+.job {
+  margin-bottom: 24px;
+}
+
+.job:last-child {
+  margin-bottom: 0;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.job-header h3 {
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+
+.job-date {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.job-meta {
+  font-size: 0.9rem;
+  color: var(--color-accent-dark);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.job ul {
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.job ul li {
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+/* EDUCATION */
+.edu {
+  margin-bottom: 16px;
+}
+
+.edu:last-child {
+  margin-bottom: 0;
+}
+
+.edu h3 {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.edu p {
+  font-size: 0.92rem;
+  color: var(--color-muted);
+  margin: 2px 0;
+}
+
+/* VISITOR COUNTER */
+.visitor-section {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  background: #eef3f8;
+}
+
+#visitor-count {
+  font-weight: 600;
+  color: var(--color-accent-dark);
+}
+
+/* FOOTER */
+.footer {
+  padding: 24px 0 40px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .section {
+    padding: 18px 18px;
+  }
+  .job-header {
+    flex-direction: column;
+  }
+}

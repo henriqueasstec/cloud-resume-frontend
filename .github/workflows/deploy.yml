@@ -27,7 +27,7 @@ jobs:
           az storage blob upload-batch \
             --account-name henriquecvresume \
             --destination '$web' \
-            --source . \
+            --source ./public \
             --overwrite \
             --auth-mode login
 
